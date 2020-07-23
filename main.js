@@ -41,12 +41,8 @@ class Wagon{
     }
 
     shouldQuarantine(){
-        for(let index=0;index < this.passengers.length; index++){
-            if(this.passengers[index].isHealthy === false){
-                return true
-
-            }
-        }
+         const sick = this.passengers.some(person => person.isHealthy === false)
+            return sick
 
     }
     
